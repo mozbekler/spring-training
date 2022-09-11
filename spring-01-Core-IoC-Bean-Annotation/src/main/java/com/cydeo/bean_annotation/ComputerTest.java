@@ -17,7 +17,7 @@ public class ComputerTest {
         Monitor theMonitor = container.getBean(Monitor.class);
 //        SonyMonitor theMonitor = container.getBean(SonyMonitor.class);
         Case theCase = container.getBean(Case.class);
-        Motherboard theMotherboard = container.getBean(Motherboard.class);
+        Motherboard theMotherboard = container.getBean((Motherboard.class));
 
         PC myPc = new PC(theCase,theMonitor,theMotherboard);
 
@@ -26,4 +26,8 @@ public class ComputerTest {
 
 
     }
+
+
+
+
 }

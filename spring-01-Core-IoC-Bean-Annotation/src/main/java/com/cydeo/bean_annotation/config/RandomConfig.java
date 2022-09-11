@@ -7,12 +7,13 @@ import org.springframework.context.annotation.Configuration;
 public class RandomConfig {
 
     @Bean
-    public String myString(){
-        return "Cydeo";
+    public Integer integer(){
+        return 1;
     }
 
     @Bean
-    public Integer myInteger(){
-        return 5;
+    public String str(){
+        return "Cydeo";
     }
+
 }

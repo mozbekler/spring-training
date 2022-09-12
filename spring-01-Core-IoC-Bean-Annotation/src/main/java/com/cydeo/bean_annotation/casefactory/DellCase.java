@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
 public class DellCase extends Case {
 
     public DellCase(String model, String manufacturer, String powerSupply) {

@@ -14,7 +14,67 @@
 <h2 th:text="${ 'Hello' + students.get(0).firstName}"></h2>
 <h2 th:text="${ students.get(0).firstName + ' ' + students.get(0).lastName}"></h2>
 
+<!--Link-->
+<h2>
+<a th:href="@{https://cydeo.com}">Cydeo Page</a>
+</h2>
 
+<h2>
+    <a th:href="@{/student/welcome}">Welcome</a>
+</h2>
+<!--Adding Parameters in Link-->
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link1</a>
+</h2>
+
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Link2</a>
+</h2>
+
+<!--Iteration-->
+
+<h2>Printing Student's First Name</h2>
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.firstName}"></li>
+</ul>
+
+<h2>Printing Student's Last Name</h2>
+<ul>
+    <li th:each=" student : ${students} " th:text="${student.lastName}"></li>
+</ul>
+
+<h2>Printing Student's in table</h2>
+
+<table>
+    <thead>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${mentors.get(0).firstName}"></td>
+        <td th:text="${mentors.get(0).lastName}"></td>
+        <td th:text="${mentors.get(0).age}"></td>
+        <td th:text="${mentors.get(0).getGender()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${mentors.get(1).firstName}"></td>
+        <td th:text="${mentors.get(1).lastName}"></td>
+        <td th:text="${mentors.get(1).age}"></td>
+        <td th:text="${mentors.get(1).getGender()}"></td>
+    </tr>
+    <tr>
+        <td th:text="${mentors.get(2).firstName}"></td>
+        <td th:text="${mentors.get(2).lastName}"></td>
+        <td th:text="${mentors.get(2).age}"></td>
+        <td th:text="${mentors.get(2).getGender()}"></td>
+    </tr>
+    </tbody>
+</table>
 
 
 

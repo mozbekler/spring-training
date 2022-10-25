@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/student")
 public class StudentController {
 
-    @RequestMapping(value = "/register",method = RequestMethod.GET) //localhost:8080/student/register
+   // @RequestMapping(value = "/register",method = RequestMethod.GET) //localhost:8080/student/register
     @GetMapping("/register")
     public String register(Model model){
 
@@ -20,10 +20,11 @@ public class StudentController {
 
     }
 
-    @RequestMapping(value = "/welcome",method = RequestMethod.POST) //localhost:8080/student/welcome?name=Ozzy
+    //@RequestMapping(value = "/welcome",method = RequestMethod.POST) //localhost:8080/student/welcome?name=Ozzy
     @PostMapping("/welcome")
     public String welcome(@RequestParam String name){
 
+        System.out.println(name);
         return "student/welcome";
     }
 

@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;
@@ -28,7 +28,7 @@ public class Employee {
     private Department department;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    private BigDecimal salary;
-    @OneToOne
+    private Integer salary;
+    @ManyToOne
     private Region region;
 }

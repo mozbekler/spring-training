@@ -47,5 +47,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println(employeeRepository.findByFirstNameIsNot("Berrie"));
 
         System.out.println(employeeRepository.retrieveEmployee());
+
+        System.out.println("Salaries GREATER THAN: "+employeeRepository.retrieveEmployeeSalaryGreaterThan(165000));
     }
 }

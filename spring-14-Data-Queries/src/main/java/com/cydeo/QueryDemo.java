@@ -45,5 +45,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("------------------EMPLOYEES----------------------");
 
         System.out.println(employeeRepository.findByFirstNameIsNot("Berrie"));
+
+        System.out.println(employeeRepository.retrieveEmployee());
     }
 }
